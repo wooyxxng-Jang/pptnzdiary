@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		052B49845B2EA4FFF077F7F8 /* PptnzdiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F661D28D309E9D36E5D3E495 /* PptnzdiaryApp.swift */; };
+		1456630A769BFD908D463B32 /* AttendanceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4036BFFA13A5B83309A615E1 /* AttendanceRecord.swift */; };
+		275C169B9373995C53368743 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1923F79953B1E81202D0A6 /* RootTabView.swift */; };
+		5AC06C7E74F06044356676DD /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E081136A1B955541E268225D /* Concert.swift */; };
+		62B9624C0DA27555FF1CCC06 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2436045CC5FD45B70CD8B71A /* ToolsView.swift */; };
+		875C3CC598FF64DBB4EAB3A6 /* SeedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA4F2EF2835D9E1871EE2A /* SeedData.json */; };
+		890D1CFF0B3A0A479D42FC5C /* ConcertArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019BF418EB957DD59970B70 /* ConcertArchiveView.swift */; };
+		B777DF63DCC2638EFC452822 /* ConcertDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760B64219354B50770A969F /* ConcertDetailView.swift */; };
+		BA899B9592BDB7FF39D86E47 /* FavoriteMomentTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BF393DC979C81E3C0C11D /* FavoriteMomentTag.swift */; };
+		C037DA9DBAF91B144A2FA2F3 /* SetlistEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C306337071700FE342F0373 /* SetlistEntry.swift */; };
+		C71BD6B0F528015BD0DF2E6A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5826196079C5005FB5A27 /* Song.swift */; };
+		DA4996DAC861328457737CCD /* SeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9334F42ABBDEBC529F55952B /* SeedLoader.swift */; };
+		FE2AC98BD96AAFFC48BB1C32 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EFD4D95132E6D2A633A5CA /* MyPageView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13F5826196079C5005FB5A27 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		22EFD4D95132E6D2A633A5CA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		2436045CC5FD45B70CD8B71A /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		2BFBE81694ADACF1B1AC48B6 /* pptnzdiary.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = pptnzdiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ECA4F2EF2835D9E1871EE2A /* SeedData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SeedData.json; sourceTree = "<group>"; };
+		4036BFFA13A5B83309A615E1 /* AttendanceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecord.swift; sourceTree = "<group>"; };
+		4C306337071700FE342F0373 /* SetlistEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetlistEntry.swift; sourceTree = "<group>"; };
+		617D9142624C93CF7B485249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8019BF418EB957DD59970B70 /* ConcertArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertArchiveView.swift; sourceTree = "<group>"; };
+		8760B64219354B50770A969F /* ConcertDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertDetailView.swift; sourceTree = "<group>"; };
+		9334F42ABBDEBC529F55952B /* SeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedLoader.swift; sourceTree = "<group>"; };
+		9C1BF393DC979C81E3C0C11D /* FavoriteMomentTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMomentTag.swift; sourceTree = "<group>"; };
+		E081136A1B955541E268225D /* Concert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
+		F661D28D309E9D36E5D3E495 /* PptnzdiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PptnzdiaryApp.swift; sourceTree = "<group>"; };
+		FB1923F79953B1E81202D0A6 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0B07784F4105182F5137F123 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BFBE81694ADACF1B1AC48B6 /* pptnzdiary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2797CC5E300213CC17658203 = {
+			isa = PBXGroup;
+			children = (
+				ECDAC8B891196497A4DE5A70 /* Sources */,
+				0B07784F4105182F5137F123 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98154AD648C9262CE6FA792D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9C1BF393DC979C81E3C0C11D /* FavoriteMomentTag.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		993415242A2BEAE2AC211FAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8019BF418EB957DD59970B70 /* ConcertArchiveView.swift */,
+				8760B64219354B50770A969F /* ConcertDetailView.swift */,
+				22EFD4D95132E6D2A633A5CA /* MyPageView.swift */,
+				FB1923F79953B1E81202D0A6 /* RootTabView.swift */,
+				2436045CC5FD45B70CD8B71A /* ToolsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9948AE1B6C1C21E9507020E7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				617D9142624C93CF7B485249 /* Info.plist */,
+				F661D28D309E9D36E5D3E495 /* PptnzdiaryApp.swift */,
+				2ECA4F2EF2835D9E1871EE2A /* SeedData.json */,
+				9334F42ABBDEBC529F55952B /* SeedLoader.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ECDAC8B891196497A4DE5A70 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9948AE1B6C1C21E9507020E7 /* App */,
+				98154AD648C9262CE6FA792D /* Constants */,
+				F03247ABECFF25901A4988DA /* Models */,
+				993415242A2BEAE2AC211FAD /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F03247ABECFF25901A4988DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4036BFFA13A5B83309A615E1 /* AttendanceRecord.swift */,
+				E081136A1B955541E268225D /* Concert.swift */,
+				4C306337071700FE342F0373 /* SetlistEntry.swift */,
+				13F5826196079C5005FB5A27 /* Song.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F7F23D2001D6CFBC8A760EA /* pptnzdiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91523DE74B5E505249F4E47A /* Build configuration list for PBXNativeTarget "pptnzdiary" */;
+			buildPhases = (
+				9FBB0CEB8132FB5AF957AA90 /* Sources */,
+				09FF52EB795C8E5BFA97937E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pptnzdiary;
+			packageProductDependencies = (
+			);
+			productName = pptnzdiary;
+			productReference = 2BFBE81694ADACF1B1AC48B6 /* pptnzdiary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F02657BA1476E36984912A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					2F7F23D2001D6CFBC8A760EA = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = FBFCC7717E716FF56694A17D /* Build configuration list for PBXProject "pptnzdiary" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2797CC5E300213CC17658203;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0B07784F4105182F5137F123 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F7F23D2001D6CFBC8A760EA /* pptnzdiary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09FF52EB795C8E5BFA97937E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875C3CC598FF64DBB4EAB3A6 /* SeedData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FBB0CEB8132FB5AF957AA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1456630A769BFD908D463B32 /* AttendanceRecord.swift in Sources */,
+				5AC06C7E74F06044356676DD /* Concert.swift in Sources */,
+				890D1CFF0B3A0A479D42FC5C /* ConcertArchiveView.swift in Sources */,
+				B777DF63DCC2638EFC452822 /* ConcertDetailView.swift in Sources */,
+				BA899B9592BDB7FF39D86E47 /* FavoriteMomentTag.swift in Sources */,
+				FE2AC98BD96AAFFC48BB1C32 /* MyPageView.swift in Sources */,
+				052B49845B2EA4FFF077F7F8 /* PptnzdiaryApp.swift in Sources */,
+				275C169B9373995C53368743 /* RootTabView.swift in Sources */,
+				DA4996DAC861328457737CCD /* SeedLoader.swift in Sources */,
+				C037DA9DBAF91B144A2FA2F3 /* SetlistEntry.swift in Sources */,
+				C71BD6B0F528015BD0DF2E6A /* Song.swift in Sources */,
+				62B9624C0DA27555FF1CCC06 /* ToolsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		426A3DF2D4BEDD5257A480FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wooyoung.pptnzdiary;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4BD97C8CE4F989123B50D947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6C2FBC005A54D2AA279F4409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wooyoung.pptnzdiary;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		779FE882D39CE81A22E4A92A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91523DE74B5E505249F4E47A /* Build configuration list for PBXNativeTarget "pptnzdiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426A3DF2D4BEDD5257A480FF /* Debug */,
+				6C2FBC005A54D2AA279F4409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FBFCC7717E716FF56694A17D /* Build configuration list for PBXProject "pptnzdiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				779FE882D39CE81A22E4A92A /* Debug */,
+				4BD97C8CE4F989123B50D947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F02657BA1476E36984912A0 /* Project object */;
+}
