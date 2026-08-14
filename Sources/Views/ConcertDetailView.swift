@@ -41,12 +41,6 @@ struct ConcertDetailView: View {
                             .foregroundStyle(Color.accentColor)
                             .clipShape(Capsule())
                     }
-
-                    if let note = concert.note, !note.isEmpty {
-                        Text(note)
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
-                    }
                 }
                 .padding(.vertical, 4)
             }

@@ -52,7 +52,7 @@ def load_concerts(ws):
     concerts = {}
     for row in ws.iter_rows(min_row=2, values_only=True):
         # 시트에 시리즈ID(다일차 공연 그룹핑용) 컬럼이 앞에 추가됨 -> 변환에는 사용하지 않음
-        _series_id, concert_id, title, date_text, venue, solo, note = row
+        _series_id, concert_id, title, date_text, venue, solo, _note = row
         if concert_id is None:
             continue
         concerts[concert_id] = {
@@ -62,7 +62,6 @@ def load_concerts(ws):
             "date": parse_date(date_text),
             "venue": venue if venue else "",
             "tourType": "단독 공연" if solo == "O" else "외부 공연",
-            "note": note,
             "sourceNote": "나무위키",
             "setlist": [],
         }

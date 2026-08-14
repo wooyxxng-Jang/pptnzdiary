@@ -22,6 +22,7 @@ final class AttendanceRecord {
     var favoriteSong: Song?         // 가장 좋았던 곡
     var weatherSummary: String?     // 자동 조회된 날씨 요약
     var oneLineReview: String?      // 한줄평
+    var photoData: Data?            // 대표 사진 (JPEG)
     var createdAt: Date
 
     init(
@@ -41,6 +42,7 @@ final class AttendanceRecord {
         favoriteSong: Song? = nil,
         weatherSummary: String? = nil,
         oneLineReview: String? = nil,
+        photoData: Data? = nil,
         createdAt: Date = .now
     ) {
         self.id = id
@@ -59,6 +61,7 @@ final class AttendanceRecord {
         self.favoriteSong = favoriteSong
         self.weatherSummary = weatherSummary
         self.oneLineReview = oneLineReview
+        self.photoData = photoData
         self.createdAt = createdAt
     }
 }

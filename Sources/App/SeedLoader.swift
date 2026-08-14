@@ -16,7 +16,6 @@ enum SeedLoader {
         let date: String
         let venue: String
         let tourType: String
-        let note: String?
         let sourceNote: String?
         let setlist: [SeedSetlistEntry]
     }
@@ -55,7 +54,6 @@ enum SeedLoader {
                     dateText: seedConcert.dateText,
                     venue: seedConcert.venue,
                     tourType: seedConcert.tourType,
-                    note: seedConcert.note,
                     sourceNote: seedConcert.sourceNote
                 )
                 context.insert(concert)

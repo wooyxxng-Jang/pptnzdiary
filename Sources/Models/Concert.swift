@@ -10,7 +10,6 @@ final class Concert {
     var venue: String
     var venueLocation: String?
     var tourType: String
-    var note: String?           // 공연 단위 비고 (출처 보강 설명 등, 원문 그대로 보존)
     var sourceNote: String?
 
     @Relationship(deleteRule: .cascade, inverse: \SetlistEntry.concert)
@@ -27,7 +26,6 @@ final class Concert {
         venue: String,
         venueLocation: String? = nil,
         tourType: String,
-        note: String? = nil,
         sourceNote: String? = nil
     ) {
         self.id = id
@@ -37,7 +35,6 @@ final class Concert {
         self.venue = venue
         self.venueLocation = venueLocation
         self.tourType = tourType
-        self.note = note
         self.sourceNote = sourceNote
     }
 }

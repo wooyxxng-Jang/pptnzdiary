@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import PhotosUI
 
 struct AttendanceRecordFormView: View {
     @Environment(\.modelContext) private var context
@@ -25,6 +26,8 @@ struct AttendanceRecordFormView: View {
     @State private var oneLineReview: String
     @State private var isLoadingWeather = false
     @State private var weatherErrorMessage: String?
+    @State private var photoData: Data?
+    @State private var selectedPhotoItem: PhotosPickerItem?
 
     init(concert: Concert) {
         self.concert = concert
@@ -45,6 +48,7 @@ struct AttendanceRecordFormView: View {
         _favoriteSong = State(initialValue: record?.favoriteSong)
         _weatherSummary = State(initialValue: record?.weatherSummary ?? "")
         _oneLineReview = State(initialValue: record?.oneLineReview ?? "")
+        _photoData = State(initialValue: record?.photoData)
     }
 
     private var setlistSongs: [Song] {
@@ -67,6 +71,28 @@ struct AttendanceRecordFormView: View {
         Form {
             Section {
                 Toggle("공연에 다녀왔어요", isOn: $attended)
+            }
+
+            Section("대표 사진") {
+                if let photoData, let uiImage = UIImage(data: photoData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxHeight: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+
+                    Button("사진 삭제", role: .destructive) {
+                        self.photoData = nil
+                        selectedPhotoItem = nil
+                    }
+                }
+
+                PhotosPicker(selection: $selectedPhotoItem, matching: .images) {
+                    Text(photoData == nil ? "사진 선택" : "사진 변경")
+                }
+                .onChange(of: selectedPhotoItem) { _, newItem in
+                    Task { await loadPhoto(from: newItem) }
+                }
             }
 
             Section("관람 정보") {
@@ -177,6 +203,16 @@ struct AttendanceRecordFormView: View {
         isLoadingWeather = false
     }
 
+    private func loadPhoto(from item: PhotosPickerItem?) async {
+        guard let item else { return }
+        guard let data = try? await item.loadTransferable(type: Data.self),
+              let uiImage = UIImage(data: data),
+              let compressed = uiImage.jpegData(compressionQuality: 0.6) else {
+            return
+        }
+        photoData = compressed
+    }
+
     private func toggleMoment(_ value: String) {
         if let index = favoriteMoments.firstIndex(of: value) {
             favoriteMoments.remove(at: index)
@@ -244,6 +280,7 @@ struct AttendanceRecordFormView: View {
             record.favoriteSong = favoriteSong
             record.weatherSummary = normalizedWeatherSummary
             record.oneLineReview = normalizedOneLineReview
+            record.photoData = photoData
         } else {
             let record = AttendanceRecord(
                 concert: concert,
@@ -260,7 +297,8 @@ struct AttendanceRecordFormView: View {
                 memorableQuote: normalizedMemorableQuote,
                 favoriteSong: favoriteSong,
                 weatherSummary: normalizedWeatherSummary,
-                oneLineReview: normalizedOneLineReview
+                oneLineReview: normalizedOneLineReview,
+                photoData: photoData
             )
             context.insert(record)
             concert.attendanceRecords.append(record)
