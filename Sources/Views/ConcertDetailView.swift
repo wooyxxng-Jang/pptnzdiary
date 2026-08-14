@@ -52,12 +52,14 @@ struct ConcertDetailView: View {
             }
 
             Section {
-                Button {
-                    // 마일스톤 3에서 구현 예정
+                NavigationLink {
+                    AttendanceRecordFormView(concert: concert)
                 } label: {
-                    Label("관람 기록 작성/보기", systemImage: "square.and.pencil")
+                    Label(
+                        concert.attendanceRecords.isEmpty ? "관람 기록 작성" : "관람 기록 보기/수정",
+                        systemImage: "square.and.pencil"
+                    )
                 }
-                .disabled(true)
             }
 
             if sortedSetlist.isEmpty {
