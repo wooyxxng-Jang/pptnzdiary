@@ -23,6 +23,8 @@ struct AttendanceRecordFormView: View {
     @State private var favoriteSong: Song?
     @State private var weatherSummary: String
     @State private var oneLineReview: String
+    @State private var isLoadingWeather = false
+    @State private var weatherErrorMessage: String?
 
     init(concert: Concert) {
         self.concert = concert
@@ -124,9 +126,31 @@ struct AttendanceRecordFormView: View {
 
             Section("날씨") {
                 TextField("날씨 메모 (예: 맑음, 15도)", text: $weatherSummary)
-                Text("날씨 자동 조회는 다음 업데이트에서 지원됩니다.")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+
+                if WeatherService.isDateSupported(concert.date) {
+                    Button {
+                        Task { await fetchWeather() }
+                    } label: {
+                        HStack {
+                            Text("날씨 자동 조회")
+                            if isLoadingWeather {
+                                Spacer()
+                                ProgressView()
+                            }
+                        }
+                    }
+                    .disabled(isLoadingWeather)
+                } else {
+                    Text("공연 날짜가 확정되지 않아 자동 조회할 수 없어요.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                if let weatherErrorMessage {
+                    Text(weatherErrorMessage)
+                        .font(.caption)
+                        .foregroundStyle(.red)
+                }
             }
 
             Section("한줄평") {
@@ -140,6 +164,17 @@ struct AttendanceRecordFormView: View {
                 Button("저장") { save() }
             }
         }
+    }
+
+    private func fetchWeather() async {
+        isLoadingWeather = true
+        weatherErrorMessage = nil
+        do {
+            weatherSummary = try await WeatherService.fetchWeatherSummary(date: concert.date, venue: concert.venue)
+        } catch {
+            weatherErrorMessage = error.localizedDescription
+        }
+        isLoadingWeather = false
     }
 
     private func toggleMoment(_ value: String) {

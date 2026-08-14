@@ -15,6 +15,7 @@
 		875C3CC598FF64DBB4EAB3A6 /* SeedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA4F2EF2835D9E1871EE2A /* SeedData.json */; };
 		890D1CFF0B3A0A479D42FC5C /* ConcertArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019BF418EB957DD59970B70 /* ConcertArchiveView.swift */; };
 		9B055A54F879EF58C6B9A6B5 /* AttendanceRecordFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B774E79740637BCC5591 /* AttendanceRecordFormView.swift */; };
+		B6F00887CE870752CD5286DD /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C938925B0C6AA1C86C8CD2C /* WeatherService.swift */; };
 		B777DF63DCC2638EFC452822 /* ConcertDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760B64219354B50770A969F /* ConcertDetailView.swift */; };
 		BA899B9592BDB7FF39D86E47 /* FavoriteMomentTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BF393DC979C81E3C0C11D /* FavoriteMomentTag.swift */; };
 		C037DA9DBAF91B144A2FA2F3 /* SetlistEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C306337071700FE342F0373 /* SetlistEntry.swift */; };
@@ -28,6 +29,7 @@
 		22EFD4D95132E6D2A633A5CA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		2436045CC5FD45B70CD8B71A /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		2BFBE81694ADACF1B1AC48B6 /* pptnzdiary.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = pptnzdiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C938925B0C6AA1C86C8CD2C /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		2ECA4F2EF2835D9E1871EE2A /* SeedData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SeedData.json; sourceTree = "<group>"; };
 		4036BFFA13A5B83309A615E1 /* AttendanceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecord.swift; sourceTree = "<group>"; };
 		4C306337071700FE342F0373 /* SetlistEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetlistEntry.swift; sourceTree = "<group>"; };
@@ -91,12 +93,21 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		D3E21663D63FF8BBC8E2BA46 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C938925B0C6AA1C86C8CD2C /* WeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		ECDAC8B891196497A4DE5A70 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				9948AE1B6C1C21E9507020E7 /* App */,
 				98154AD648C9262CE6FA792D /* Constants */,
 				F03247ABECFF25901A4988DA /* Models */,
+				D3E21663D63FF8BBC8E2BA46 /* Services */,
 				993415242A2BEAE2AC211FAD /* Views */,
 			);
 			path = Sources;
@@ -219,6 +230,7 @@
 				C037DA9DBAF91B144A2FA2F3 /* SetlistEntry.swift in Sources */,
 				C71BD6B0F528015BD0DF2E6A /* Song.swift in Sources */,
 				62B9624C0DA27555FF1CCC06 /* ToolsView.swift in Sources */,
+				B6F00887CE870752CD5286DD /* WeatherService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
