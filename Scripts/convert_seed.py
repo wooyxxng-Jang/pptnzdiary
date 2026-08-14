@@ -51,7 +51,8 @@ def deterministic_id(*parts):
 def load_concerts(ws):
     concerts = {}
     for row in ws.iter_rows(min_row=2, values_only=True):
-        concert_id, title, date_text, venue, solo, note = row
+        # 시트에 시리즈ID(다일차 공연 그룹핑용) 컬럼이 앞에 추가됨 -> 변환에는 사용하지 않음
+        _series_id, concert_id, title, date_text, venue, solo, note = row
         if concert_id is None:
             continue
         concerts[concert_id] = {
@@ -69,9 +70,34 @@ def load_concerts(ws):
 
 
 def load_setlist(ws, concerts):
-    for row in ws.iter_rows(min_row=2, values_only=True):
-        concert_id, session, order, song_title, note = row
-        if concert_id is None or concert_id not in concerts:
+    # 공연 시트가 다일차 공연을 "시리즈ID-회차"(예: C0009-1)로 쪼개 놓은 경우,
+    # 셋리스트 시트의 시리즈ID는 여전히 상위 값(C0009)만 가리키므로 회차 컬럼으로 매칭해야 한다.
+    series_days = {}
+    for concert_id in concerts:
+        if "-" in concert_id:
+            series_id, _, day = concert_id.rpartition("-")
+            series_days.setdefault(series_id, {})[day] = concert_id
+
+    unresolved = []
+    for row_index, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
+        series_id, session, order, song_title, note = row
+        if series_id is None:
+            continue
+
+        if series_id in concerts:
+            concert_id = series_id
+        elif series_id in series_days:
+            days = series_days[series_id]
+            session_key = str(session).strip() if session is not None else None
+            if session_key and session_key in days:
+                concert_id = days[session_key]
+            elif len(days) == 1:
+                concert_id = next(iter(days.values()))
+            else:
+                unresolved.append((row_index, series_id, song_title))
+                continue
+        else:
+            unresolved.append((row_index, series_id, song_title))
             continue
 
         combined_note = note
@@ -86,6 +112,13 @@ def load_setlist(ws, concerts):
             "note": combined_note,
             "isEncore": is_encore,
         })
+
+    if unresolved:
+        print(f"error: 셋리스트 {len(unresolved)}건을 공연에 연결하지 못했습니다 "
+              f"(공연회차 태깅 미완료로 추정). 예시:", file=sys.stderr)
+        for row_index, series_id, song_title in unresolved[:10]:
+            print(f"  - 셋리스트 시트 {row_index}행: 시리즈ID={series_id}, 곡명={song_title}", file=sys.stderr)
+        sys.exit(1)
 
     for concert in concerts.values():
         concert["setlist"].sort(key=lambda entry: entry["order"])

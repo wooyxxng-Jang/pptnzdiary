@@ -120,6 +120,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91523DE74B5E505249F4E47A /* Build configuration list for PBXNativeTarget "pptnzdiary" */;
 			buildPhases = (
+				39B4E03569799400918F5517 /* Regenerate SeedData.json if xlsx changed */,
 				9FBB0CEB8132FB5AF957AA90 /* Sources */,
 				09FF52EB795C8E5BFA97937E /* Resources */,
 			);
@@ -177,6 +178,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39B4E03569799400918F5517 /* Regenerate SeedData.json if xlsx changed */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Regenerate SeedData.json if xlsx changed";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/Scripts/regenerate_seed_if_needed.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9FBB0CEB8132FB5AF957AA90 /* Sources */ = {
