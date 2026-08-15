@@ -7,19 +7,13 @@ enum BannerColorPreset: String, CaseIterable, Identifiable {
     case yellowOnBlack = "옐로우 온 블랙"
     case pinkOnBlack = "핑크 온 블랙"
     case skyBlueOnBlack = "스카이블루 온 블랙"
-    case blackOnWhite = "블랙 온 화이트"
 
     var id: String { rawValue }
 
     var displayName: String { rawValue }
 
     var backgroundColor: Color {
-        switch self {
-        case .whiteOnBlack, .yellowOnBlack, .pinkOnBlack, .skyBlueOnBlack:
-            return .black
-        case .blackOnWhite:
-            return .white
-        }
+        .black
     }
 
     var textColor: Color {
@@ -32,8 +26,6 @@ enum BannerColorPreset: String, CaseIterable, Identifiable {
             return .pink
         case .skyBlueOnBlack:
             return Color(red: 0.4, green: 0.75, blue: 1.0)
-        case .blackOnWhite:
-            return .black
         }
     }
 }
