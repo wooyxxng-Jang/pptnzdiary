@@ -15,6 +15,7 @@
 		875C3CC598FF64DBB4EAB3A6 /* SeedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA4F2EF2835D9E1871EE2A /* SeedData.json */; };
 		890D1CFF0B3A0A479D42FC5C /* ConcertArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019BF418EB957DD59970B70 /* ConcertArchiveView.swift */; };
 		9B055A54F879EF58C6B9A6B5 /* AttendanceRecordFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B774E79740637BCC5591 /* AttendanceRecordFormView.swift */; };
+		B2837129930D376D6C02AE17 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235027172008471452D953DD /* StatisticsView.swift */; };
 		B4728CCBD095635C843AC5AC /* AddConcertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63F3946EAC9B8F4384162C /* AddConcertView.swift */; };
 		B6F00887CE870752CD5286DD /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C938925B0C6AA1C86C8CD2C /* WeatherService.swift */; };
 		B777DF63DCC2638EFC452822 /* ConcertDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8760B64219354B50770A969F /* ConcertDetailView.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		13F5826196079C5005FB5A27 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		22EFD4D95132E6D2A633A5CA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		235027172008471452D953DD /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		2436045CC5FD45B70CD8B71A /* ToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
 		2BFBE81694ADACF1B1AC48B6 /* pptnzdiary.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = pptnzdiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C938925B0C6AA1C86C8CD2C /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				8760B64219354B50770A969F /* ConcertDetailView.swift */,
 				22EFD4D95132E6D2A633A5CA /* MyPageView.swift */,
 				FB1923F79953B1E81202D0A6 /* RootTabView.swift */,
+				235027172008471452D953DD /* StatisticsView.swift */,
 				2436045CC5FD45B70CD8B71A /* ToolsView.swift */,
 			);
 			path = Views;
@@ -233,6 +236,7 @@
 				DA4996DAC861328457737CCD /* SeedLoader.swift in Sources */,
 				C037DA9DBAF91B144A2FA2F3 /* SetlistEntry.swift in Sources */,
 				C71BD6B0F528015BD0DF2E6A /* Song.swift in Sources */,
+				B2837129930D376D6C02AE17 /* StatisticsView.swift in Sources */,
 				62B9624C0DA27555FF1CCC06 /* ToolsView.swift in Sources */,
 				B6F00887CE870752CD5286DD /* WeatherService.swift in Sources */,
 			);

@@ -13,6 +13,11 @@ struct RootTabView: View {
                     Label("내 기록", systemImage: "person.crop.circle")
                 }
 
+            StatisticsView()
+                .tabItem {
+                    Label("통계", systemImage: "chart.bar.fill")
+                }
+
             ToolsView()
                 .tabItem {
                     Label("도구", systemImage: "wrench.and.screwdriver")
