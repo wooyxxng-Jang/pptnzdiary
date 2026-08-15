@@ -8,7 +8,8 @@ struct PptnzdiaryApp: App {
             Concert.self,
             Song.self,
             SetlistEntry.self,
-            AttendanceRecord.self
+            AttendanceRecord.self,
+            BannerPhrase.self
         ])
         do {
             return try ModelContainer(for: schema)

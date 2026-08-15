@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		052B49845B2EA4FFF077F7F8 /* PptnzdiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F661D28D309E9D36E5D3E495 /* PptnzdiaryApp.swift */; };
+		0918A5A8082C6494A15CCF07 /* BannerPhrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BD946EC97B5EF3A9231B1 /* BannerPhrase.swift */; };
 		1456630A769BFD908D463B32 /* AttendanceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4036BFFA13A5B83309A615E1 /* AttendanceRecord.swift */; };
 		275C169B9373995C53368743 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1923F79953B1E81202D0A6 /* RootTabView.swift */; };
+		4695C415680B80409EC9B60B /* BannerDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B62080302C0014D5123C4 /* BannerDisplayView.swift */; };
 		5AC06C7E74F06044356676DD /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E081136A1B955541E268225D /* Concert.swift */; };
 		62B9624C0DA27555FF1CCC06 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2436045CC5FD45B70CD8B71A /* ToolsView.swift */; };
+		840E432CA7D10A83CD13EBBF /* BannerEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B75926E956647E297E7E4DF /* BannerEditView.swift */; };
 		875C3CC598FF64DBB4EAB3A6 /* SeedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA4F2EF2835D9E1871EE2A /* SeedData.json */; };
 		890D1CFF0B3A0A479D42FC5C /* ConcertArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019BF418EB957DD59970B70 /* ConcertArchiveView.swift */; };
 		9B055A54F879EF58C6B9A6B5 /* AttendanceRecordFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F4B774E79740637BCC5591 /* AttendanceRecordFormView.swift */; };
+		A286C1441ACFCC291F402EAE /* BannerColorPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA848117E6E3C91F2EFF6B1 /* BannerColorPreset.swift */; };
 		B2837129930D376D6C02AE17 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235027172008471452D953DD /* StatisticsView.swift */; };
 		B4728CCBD095635C843AC5AC /* AddConcertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E63F3946EAC9B8F4384162C /* AddConcertView.swift */; };
 		B6F00887CE870752CD5286DD /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C938925B0C6AA1C86C8CD2C /* WeatherService.swift */; };
@@ -36,13 +40,17 @@
 		2ECA4F2EF2835D9E1871EE2A /* SeedData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SeedData.json; sourceTree = "<group>"; };
 		4036BFFA13A5B83309A615E1 /* AttendanceRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecord.swift; sourceTree = "<group>"; };
 		4C306337071700FE342F0373 /* SetlistEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetlistEntry.swift; sourceTree = "<group>"; };
+		564B62080302C0014D5123C4 /* BannerDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDisplayView.swift; sourceTree = "<group>"; };
 		617D9142624C93CF7B485249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		64F4B774E79740637BCC5591 /* AttendanceRecordFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecordFormView.swift; sourceTree = "<group>"; };
 		6E63F3946EAC9B8F4384162C /* AddConcertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConcertView.swift; sourceTree = "<group>"; };
 		8019BF418EB957DD59970B70 /* ConcertArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertArchiveView.swift; sourceTree = "<group>"; };
 		8760B64219354B50770A969F /* ConcertDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertDetailView.swift; sourceTree = "<group>"; };
+		8B75926E956647E297E7E4DF /* BannerEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerEditView.swift; sourceTree = "<group>"; };
 		9334F42ABBDEBC529F55952B /* SeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedLoader.swift; sourceTree = "<group>"; };
 		9C1BF393DC979C81E3C0C11D /* FavoriteMomentTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMomentTag.swift; sourceTree = "<group>"; };
+		ADA848117E6E3C91F2EFF6B1 /* BannerColorPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerColorPreset.swift; sourceTree = "<group>"; };
+		AE3BD946EC97B5EF3A9231B1 /* BannerPhrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerPhrase.swift; sourceTree = "<group>"; };
 		E081136A1B955541E268225D /* Concert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
 		F661D28D309E9D36E5D3E495 /* PptnzdiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PptnzdiaryApp.swift; sourceTree = "<group>"; };
 		FB1923F79953B1E81202D0A6 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 		98154AD648C9262CE6FA792D /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				ADA848117E6E3C91F2EFF6B1 /* BannerColorPreset.swift */,
 				9C1BF393DC979C81E3C0C11D /* FavoriteMomentTag.swift */,
 			);
 			path = Constants;
@@ -78,6 +87,8 @@
 			children = (
 				6E63F3946EAC9B8F4384162C /* AddConcertView.swift */,
 				64F4B774E79740637BCC5591 /* AttendanceRecordFormView.swift */,
+				564B62080302C0014D5123C4 /* BannerDisplayView.swift */,
+				8B75926E956647E297E7E4DF /* BannerEditView.swift */,
 				8019BF418EB957DD59970B70 /* ConcertArchiveView.swift */,
 				8760B64219354B50770A969F /* ConcertDetailView.swift */,
 				22EFD4D95132E6D2A633A5CA /* MyPageView.swift */,
@@ -123,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				4036BFFA13A5B83309A615E1 /* AttendanceRecord.swift */,
+				AE3BD946EC97B5EF3A9231B1 /* BannerPhrase.swift */,
 				E081136A1B955541E268225D /* Concert.swift */,
 				4C306337071700FE342F0373 /* SetlistEntry.swift */,
 				13F5826196079C5005FB5A27 /* Song.swift */,
@@ -226,6 +238,10 @@
 				B4728CCBD095635C843AC5AC /* AddConcertView.swift in Sources */,
 				1456630A769BFD908D463B32 /* AttendanceRecord.swift in Sources */,
 				9B055A54F879EF58C6B9A6B5 /* AttendanceRecordFormView.swift in Sources */,
+				A286C1441ACFCC291F402EAE /* BannerColorPreset.swift in Sources */,
+				4695C415680B80409EC9B60B /* BannerDisplayView.swift in Sources */,
+				840E432CA7D10A83CD13EBBF /* BannerEditView.swift in Sources */,
+				0918A5A8082C6494A15CCF07 /* BannerPhrase.swift in Sources */,
 				5AC06C7E74F06044356676DD /* Concert.swift in Sources */,
 				890D1CFF0B3A0A479D42FC5C /* ConcertArchiveView.swift in Sources */,
 				B777DF63DCC2638EFC452822 /* ConcertDetailView.swift in Sources */,
